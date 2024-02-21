@@ -27,9 +27,9 @@ void ExplicitConversion()
 	cout << "b = " << b<<endl;
 }
 
-//int main() {
-//	ImplicitConversion();
-//	//ExplicitConversion();
-//
-//	return 0;
-//}
+int main() {
+	ImplicitConversion();
+	//ExplicitConversion();
+
+	return 0;
+}
