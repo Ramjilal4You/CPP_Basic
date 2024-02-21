@@ -128,7 +128,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\DataTypes_Literals\TypeConversion.cpp" />
     <ClCompile Include="const_cast.cpp" />
     <ClCompile Include="dynamic_cast.cpp" />
     <ClCompile Include="reinterpret_cast.cpp" />
