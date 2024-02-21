@@ -29,7 +29,7 @@ void ExplicitConversion()
 
 int main() {
 	ImplicitConversion();
-	//ExplicitConversion();
+	ExplicitConversion();
 
 	return 0;
 }
