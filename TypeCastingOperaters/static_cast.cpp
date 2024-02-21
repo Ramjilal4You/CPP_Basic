@@ -1,0 +1,98 @@
+// C++ program to illustrate the static_cast 
+#include <iostream> 
+#include <typeinfo> 
+#include <string>
+
+using namespace std;
+
+void static_cast1() 
+{
+	int num = 10;
+
+	double numDouble = static_cast<double>(num);	// converting int to double 
+
+	// printing data types
+	cout << typeid(num).name() << endl;
+	cout << typeid(static_cast<double>(num)).name() << endl;	// typecasting 
+	cout << typeid(numDouble).name() << endl;	// printing double type t 
+}
+
+// C++ Program to demonstrate static_cast char* to int*
+void static_cast_charPtrtoIntPtr()
+{
+	int a = 10;
+	char c = 'a';
+
+	int* q = (int*)&c;	//Allowed
+	//int* p = static_cast<int*>(&c);	// Not allowed
+}
+
+// C++ Program to cast class object to string object
+class integer {
+	int x;
+
+public:
+	// constructor
+	integer(int x_in = 0)
+		: x{ x_in }
+	{
+		cout << "Constructor Called" << endl;
+	}
+
+	//user defined conversion operator to string type
+	operator string()
+	{
+		cout << "Conversion Operator Called" << endl;
+		return to_string(x);
+	}
+};
+
+// Driver code
+void static_cast_conversion_operator()
+{
+	integer obj(3);
+	string str = (string)obj;
+	obj = 20;	//(integer)20;
+
+	// using static_cast for typecasting
+	string str2 = static_cast<string>(obj);
+	obj = static_cast<integer>(30);
+}
+
+// C++ Program to demonstrate static_cast in inheritance
+class Base
+{};
+class Derived : public Base
+{};
+
+void static_cast_Up_DownCasting()
+{
+	Derived d1;
+	Base* b1 = (Base*)(&d1);	// Implicit upcasting allowed	
+	Base* b2 = static_cast<Base*>(&d1);	// upcasting using static_cast
+
+	Base b3;
+	Derived* d3 = (Derived*)(&b3);	// Implicit down casting allowed	
+	Derived* d4 = static_cast<Derived*>(&b3);	// down casting using static_cast
+
+}
+
+// C++ program to demonstrate static_cast to cast 'to and from' the void pointer
+void static_cast_to_and_fromVoidPtr()
+{
+	int i = 10;
+	void* v = static_cast<void*>(&i); //int ptr to void ptr
+	int* ip = static_cast<int*>(v);	//void ptr to int ptr
+	cout << *ip;
+}
+
+//int main()
+//{
+//	//static_cast1();
+//	//static_cast_charPtrtoIntPtr();
+//	//static_cast_conversion_operator();
+//	static_cast_Up_DownCasting();
+//	//static_cast_to_and_fromVoidPtr();
+//
+//	return 0;
+//}
