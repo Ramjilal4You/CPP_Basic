@@ -1,3 +1,23 @@
+/*** reinterpret_cast ***/
+/*
+* Used to convert a pointer of some data type into a pointer of another data type, 
+  even if the data types before and after conversion are different.
+* Does not check if the pointer type and data pointed by the pointer is same or not.
+* 
+* Very special and dangerous type of casting operator. 
+* 
+* Suggested to use it using proper data type (pointer data type should be same 
+  as original data type).
+*
+* If we use this type of cast, then it becomes a non-portable product. So, 
+  it is suggested not to use this concept unless required.
+*
+* It is used when we want to work with bits.
+* 
+* It is only used to typecast any pointer to its original type.
+*
+*/
+
 // C++ program to illustrate the reinterpret_cast 
 #include <iostream> 
 using namespace std;
@@ -96,13 +116,13 @@ void reinterpret_cast_PointerReinterpret()
 	new_b->fun_b();
 }
 
-//int main() {
-//	//simple example
-//	reinterpret_cast_example();
-//
-//	// reinterpret_cast using structure
-//	reinterpret_cast_bitBybitExample();
-//
-//	// CPP code to illustrate the pointer reinterpret
-//	reinterpret_cast_PointerReinterpret();
-//}
+int main() {
+	//simple example
+	reinterpret_cast_example();
+
+	// reinterpret_cast using structure
+	reinterpret_cast_bitBybitExample();
+
+	// CPP code to illustrate the pointer reinterpret
+	reinterpret_cast_PointerReinterpret();
+}

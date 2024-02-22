@@ -1,3 +1,19 @@
+/*** dynamic_cast ***/
+/*
+* Mainly used for safe downcasting at run time.
+* There must be one virtual function in the base class to use dynamic_cast.
+* Works only with polymorphic classes because,
+  it uses this information to decide safe downcasting.
+* A Dynamic_cast has runtime overhead because it checks object types at run time 
+  using RTTI.
+*
+* RTTI (Run-time type information) is a mechanism that exposes information 
+  about an object’s data type at runtime and 
+  is available only for the classes which have at least one virtual function. 
+  It allows the type of an object to be determined during program execution.
+*
+*/
+
 // C++ program demonstrate if there is no virtual function used in the Base class
 #include <iostream>
 using namespace std;
