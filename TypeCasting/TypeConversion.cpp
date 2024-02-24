@@ -1,3 +1,7 @@
+/*
+* ImplicitConversion (Automatic/Programmer do not initiate)
+* ExplicitConversion (Programmer gives intructions to compiler)
+*/
 // An example of implicit conversion 
 
 #include <iostream> 
