@@ -102,8 +102,8 @@ void static_cast_to_and_fromVoidPtr()
 
 //int main()
 //{
-//	static_cast1();
-//	static_cast_charPtrtoIntPtr();
+//	//static_cast1();
+//	//static_cast_charPtrtoIntPtr();
 //	static_cast_conversion_operator();
 //	static_cast_Up_DownCasting();
 //	static_cast_to_and_fromVoidPtr();

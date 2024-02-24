@@ -87,7 +87,7 @@ void const_cast_ChangeMemberInConstFunction(void)
 //	const_cast_CastAwayConstVolatile();
 // 
 // /* Undefined behavior to modify a value which is initially declared as const. */
-//  const_cast_modifyConstVariable()
+//	const_cast_modifyConstVariable();
 // 
 // /* It’s safe, casting won’t happen if the type of cast is not same as original object. */
 //	const_cast_safe();
