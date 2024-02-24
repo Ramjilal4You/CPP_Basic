@@ -19,8 +19,5 @@
     <ClCompile Include="reinterpret_cast.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\DataTypes_Literals\TypeConversion.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>
