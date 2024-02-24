@@ -1,3 +1,17 @@
+/*** static_cast ***/
+/*
+* The most commonly used casting operator in C++.
+* It performs compile - time type conversion.
+* Mainly used for explicit conversions that are considered safe by the compiler.
+* Used to convert between related types, 
+	- such as numeric types or 
+	- pointers in the same inheritance hierarchy.
+* Provide both upcasting and down casting.
+* Base class must be accessible to use static_cast.
+* Allows casting from any pointer type to void pointer and vice versa.
+*
+*/
+
 // C++ program to illustrate the static_cast 
 #include <iostream> 
 #include <typeinfo> 
@@ -68,11 +82,11 @@ class Derived : public Base
 void static_cast_Up_DownCasting()
 {
 	Derived d1;
-	Base* b1 = (Base*)(&d1);	// Implicit upcasting allowed	
+	Base* b1 = (Base*)(&d1);	// upcasting allowed	
 	Base* b2 = static_cast<Base*>(&d1);	// upcasting using static_cast
 
 	Base b3;
-	Derived* d3 = (Derived*)(&b3);	// Implicit down casting allowed	
+	Derived* d3 = (Derived*)(&b3);	// down casting allowed	
 	Derived* d4 = static_cast<Derived*>(&b3);	// down casting using static_cast
 
 }
@@ -90,9 +104,9 @@ void static_cast_to_and_fromVoidPtr()
 //{
 //	//static_cast1();
 //	//static_cast_charPtrtoIntPtr();
-//	//static_cast_conversion_operator();
+//	static_cast_conversion_operator();
 //	static_cast_Up_DownCasting();
-//	//static_cast_to_and_fromVoidPtr();
+//	static_cast_to_and_fromVoidPtr();
 //
 //	return 0;
 //}
