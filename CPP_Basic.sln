@@ -15,6 +15,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StaticAndDynamicScoping", "
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TypeCasting", "TypeCasting\TypeCastingOperaters.vcxproj", "{2CF3DB2B-40FA-4925-B474-E0159BBED946}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InputOutputInCpp", "InputOutputInCpp\InputOutputInCpp.vcxproj", "{6527D354-EAF7-468B-9DD4-83D9EE1281FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -71,6 +73,14 @@ Global
 		{2CF3DB2B-40FA-4925-B474-E0159BBED946}.Release|x64.Build.0 = Release|x64
 		{2CF3DB2B-40FA-4925-B474-E0159BBED946}.Release|x86.ActiveCfg = Release|Win32
 		{2CF3DB2B-40FA-4925-B474-E0159BBED946}.Release|x86.Build.0 = Release|Win32
+		{6527D354-EAF7-468B-9DD4-83D9EE1281FC}.Debug|x64.ActiveCfg = Debug|x64
+		{6527D354-EAF7-468B-9DD4-83D9EE1281FC}.Debug|x64.Build.0 = Debug|x64
+		{6527D354-EAF7-468B-9DD4-83D9EE1281FC}.Debug|x86.ActiveCfg = Debug|Win32
+		{6527D354-EAF7-468B-9DD4-83D9EE1281FC}.Debug|x86.Build.0 = Debug|Win32
+		{6527D354-EAF7-468B-9DD4-83D9EE1281FC}.Release|x64.ActiveCfg = Release|x64
+		{6527D354-EAF7-468B-9DD4-83D9EE1281FC}.Release|x64.Build.0 = Release|x64
+		{6527D354-EAF7-468B-9DD4-83D9EE1281FC}.Release|x86.ActiveCfg = Release|Win32
+		{6527D354-EAF7-468B-9DD4-83D9EE1281FC}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

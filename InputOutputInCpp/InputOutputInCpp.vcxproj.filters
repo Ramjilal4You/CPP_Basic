@@ -7,19 +7,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="static_cast.cpp">
+    <ClCompile Include="InputOutput.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="dynamic_cast.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="const_cast.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="reinterpret_cast.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TypeConversion.cpp">
+    <ClCompile Include="Manipulators.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,17 +1,30 @@
-// Since dynamic scoping is very uncommon in the familiar languages, 
-// we consider the following pseudo code as our example. 
-// It prints 20 in a language that uses dynamic scoping. 
-
-//# A perl code to demonstrate dynamic scoping
-//$x = 10;
+//###  A perl code to demonstrate dynamic scoping  ###
+//
+//# Compiler first searches the current block->successively all the calling functions.
+//# Dynamic scoping does not care about how the code is written, but instead how it executes
+//# Each time a new function is executed, a new scope is pushed onto the stack.
+//# Example Perl.
+//
+//# Since dynamic scoping is very uncommon in the familiar languages,
+//
+//$x = 10;    # global variable
+//
 //sub f
 //{
-//return $x;
+//    return $x;
 //}
+//
 //sub g
 //{
-//local $x = 20; # Since local is used, x uses dynamic scoping.
-//
-//return f();
+//    #local $x = 20; # Since local is used, x uses dynamic scoping.
+//    return f();
 //}
-//print g()."\n";
+//
+//sub h
+//{
+//    #local $x = 15;
+//    return g();
+//}
+//
+//print h()."\n";
+//
