@@ -1,4 +1,6 @@
-// C code to illustrate External-Linkage
+// C++ code to illustrate External-Linkage
+#include <iostream>
+using namespace std;
 
 void DebitCardPay( int nAmountToPay );
 void GooglePay( const int nAmountToPay );

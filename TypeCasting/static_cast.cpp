@@ -21,14 +21,15 @@ using namespace std;
 
 void static_cast1() 
 {
-	int num = 10;
+	int num = 65;
 
-	double numDouble = static_cast<double>(num);	// converting int to double 
+	char ch = static_cast<char>(num);	// converting int to char 
+	cout << ch << endl;
 
 	// printing data types
 	cout << typeid(num).name() << endl;
-	cout << typeid(static_cast<double>(num)).name() << endl;	// typecasting 
-	cout << typeid(numDouble).name() << endl;	// printing double type t 
+	cout << typeid(static_cast<char>(num)).name() << endl;	// typecasting 
+	cout << typeid(ch).name() << endl;	// printing char type 
 }
 
 // C++ Program to demonstrate static_cast char* to int*
@@ -102,11 +103,11 @@ void static_cast_to_and_fromVoidPtr()
 
 //int main()
 //{
-//	//static_cast1();
-//	//static_cast_charPtrtoIntPtr();
-//	static_cast_conversion_operator();
-//	static_cast_Up_DownCasting();
-//	static_cast_to_and_fromVoidPtr();
-//
+//	static_cast1();
+////	static_cast_charPtrtoIntPtr();
+////	static_cast_conversion_operator();
+////	static_cast_Up_DownCasting();
+////	static_cast_to_and_fromVoidPtr();
+////
 //	return 0;
 //}

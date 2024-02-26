@@ -1,4 +1,10 @@
-// C++ code to illustrate No-Linkage
+/*** No Linkage ***/
+/*
+
+* Names not specified with external/internal linkage -> have no linkage.
+* After compilation, there is no such name(with no linkage) exists in program.
+
+*/
 #include <iostream>
 using namespace std;
 

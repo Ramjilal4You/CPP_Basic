@@ -1,4 +1,6 @@
 //// C++ code to illustrate Internal-Linkage
+#include <iostream>
+using namespace std;
 
 void PaySalaryToSoftwareEngineer( int nSalary );
 void PaySalaryToBankEmployee( int nSalary );
