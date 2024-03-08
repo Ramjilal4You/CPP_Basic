@@ -31,6 +31,7 @@ void cin_getline()
 {
 	char name[6];
 
+	cout << "Enter Name\n";
 	// Reads stream of 3 characters 
 	cin.getline(name, 4);
 
@@ -56,9 +57,9 @@ void cin_get_cout_put()
 void cin_read_cout_write()
 {
 	char name[6];
-	name[5] = '\0';	//Need to add manually
+	//name[5] = '\0';	//Need to add manually
 
-	cin.read(name, 5);	// Reads stream of characters 
+	cin.read(name, 6);	// Reads stream of characters 
 
 	cout.write(name, 6);	// Print first 6 characters
 	cout << endl;
@@ -80,7 +81,7 @@ void cin_ignore()
 	cin >> x;
 
 	// clear buffer before taking new line 
-	cin.ignore(numeric_limits<streamsize>::max(), '\n'); //comment it & Uncomment it.
+	//cin.ignore(numeric_limits<streamsize>::max(), '\n'); //comment it & Uncomment it.
 
 	cin.getline(str, 80);	// Input a string 
 	cout << "You have entered:\n";
@@ -93,11 +94,11 @@ void cout_precision()
 {
 	double pi = 3.14159783;
 
-	cout.precision(3);	// Set precision to 3
+	cout.precision(3);	// Set precision to 3 : output 3.14
 		
 	cout << pi << endl;	// Print pi
 		
-	cout.precision(6);	// Set precision to 6
+	cout.precision(5);	// Set precision to 5 : output 3.1415
 	
 	cout << pi << endl;	// Print pi
 
