@@ -36,9 +36,9 @@ void call_by_Pointer(int* var)
 //	cout << "After call_by_Reference(), num is: " << num1 << endl;
 //
 //	int num2 = 10;
-//	cout << "\nBefore call_by_Reference(), num is: " << num2 << endl;
+//	cout << "\nBefore call_by_Pointer(), num is: " << num2 << endl;
 //	call_by_Pointer(&num2);
-//	cout << "After call_by_Reference(), num is: " << num2 << endl;
+//	cout << "After call_by_Pointer(), num is: " << num2 << endl;
 //
 //	return 0;
 //}

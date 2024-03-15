@@ -2,21 +2,21 @@
 #include <iostream>
 using namespace std;
 
-// the variables a and b are parameters (formal)
-int multiply(int a, int b)
+// the variables x and y are parameters (formal)
+int my_func(int x, int y)
 {
-	int result = a * b;
+	int result = x * y;
 
 	return result;
 }
 
 //int main()
 //{
-//	int x = 2;
-//	int y = 5;
+//	int val1 = 2;
+//	int val2 = 5;
 //
-//	// the variables x and y are arguments (Actual Parameters)
-//	int result = multiply(x, y);
+//	// the variables val1 and val2 are arguments (Actual Parameters)
+//	int result = my_func(val1, val2);
 //
 //	cout << "Multiplication of 2 & 5 is : " << result << endl;
 //

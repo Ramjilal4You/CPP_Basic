@@ -4,8 +4,10 @@
 using namespace std;
 
 // Function Declaration
-int sum(int, int);
-int sum(int a, int b);
+//int sum(int, int);
+//int sum(int, int);
+//int sum(int a, int b);
+//int sum(int a, int b);
 
 // Function Definition
 int sum(int a, int b)

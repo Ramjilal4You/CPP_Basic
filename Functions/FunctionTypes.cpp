@@ -2,6 +2,7 @@
 // function declaration, definition & call
 
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 // User-Defined function
