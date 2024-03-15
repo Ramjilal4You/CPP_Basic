@@ -32,28 +32,11 @@ void Lambda_example()
 
 	printVector(v);
 
-	// below snippet find first number greater than 4
-	// find_if searches for an element for which function(third argument) returns true
-	vector<int>::iterator p = find_if(v.begin(), v.end(), [](int i){return i > 4;});
-	cout << "First number greater than 4 is : " << *p << endl;
-
-
 	// function to sort vector, lambda expression is for sorting in
 	// non-increasing order Compiler can make out return type as
 	// bool, but shown here just for explanation
 	sort(v.begin(), v.end(), [](const int& a, const int& b) -> bool{return a > b;});
 
-	printVector(v);
-
-	// function to count numbers greater than or equal to 5
-	int count_5 = count_if(v.begin(), v.end(), [](int a){return (a >= 5);});
-	cout << "The number of elements greater than or equal to 5 is : "<< count_5 << endl;
-
-	// function for removing duplicate element (after sorting all duplicate comes together)
-	p = unique(v.begin(), v.end(), [](int a, int b){return a == b;});
-
-	// resizing vector to make size equal to total different number
-	v.resize(distance(v.begin(), p));
 	printVector(v);
 
 	//	 We can also access function by storing this into variable
@@ -95,7 +78,7 @@ void Lambda_example2()
 	printVector(v2);
 
 	// access v1 by copy
-	[v1]()
+	auto printV1 = [v1]()
 		{
 			for (auto p = v1.begin(); p != v1.end(); p++)
 			{
@@ -103,19 +86,7 @@ void Lambda_example2()
 			}
 		};
 
-	int N = 5;
-
-	// below snippet find first number greater than N
-	// [N] denotes, can access only N by value
-	vector<int>::iterator p = find_if(v1.begin(), v1.end(), [N](int i){	return i > N;});
-
-	cout << "First number greater than 5 is : " << *p << endl;
-
-	// function to count numbers greater than or equal to N
-	// [=] denotes, can access all variable by value
-	int count_N = count_if(v1.begin(), v1.end(), [=](int a){return (a >= N);});
-
-	cout << "The number of elements greater than or equal to 5 is : "<< count_N << endl;
+	printV1();
 }
 
 //int main() {
