@@ -119,16 +119,16 @@ void LengthOfArray_PointerArithmatic() {
 	cout << "Number of elements in Arr[] is: " << length << endl;
 }
 
-//int main() {
-//	//Increment_Decrement();
-//
-//	//Pointer_Addition();  //same concept applies for Subtraction  
-//
-//	//Subtraction_of_two_pointers();
-//
-//	//Pointer_comparision();
-//
-//	//LengthOfArray_PointerArithmatic();
-//
-//	return 0;
-//}
+int main() {
+	Increment_Decrement();
+
+	//Pointer_Addition();  //same concept applies for Subtraction  
+
+	//Subtraction_of_two_pointers();
+
+	//Pointer_comparision();
+
+	//LengthOfArray_PointerArithmatic();
+
+	return 0;
+}
