@@ -23,18 +23,26 @@ void fun1(){
     return ;
 }
 
+void fun2(){
+    // fun1 prints a statement to show that it has been called
+    cout << "\nFunction - 2 is called." << endl;
+    return ;
+}
+
 // A callback function with the name fun2
-void fun2(void (*ptr)()){
+void fun(void (*ptr)()){
     // callback to function - 1
     (*ptr) ();
-    cout << "\nFunction - 2 is called." << endl;
+    cout << "\nFunction - is called." << endl;
     return;
 }
 
 int main()
 {
     // Calling fun_2 and passing the address of fun_1 as the parameter
-    fun2(fun1);
+    fun(&fun1);
+
+    fun(&fun2);
 
 	cout<<"\n\n";
     return 0;

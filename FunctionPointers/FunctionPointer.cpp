@@ -14,6 +14,12 @@ void fun(int a)
 	printf("Value of a is %d\n", a);
 }
 
+void fun1(int a)
+{
+	printf("\nIn fun1(int a) : ");
+	printf("Value of a is %d\n", a);
+}
+
 // A function with two parameters and int return type 
 int addTwoNumber(int a, int b)
 {
@@ -31,16 +37,19 @@ int main()
 
 
 	// fun_ptr is a pointer to function fun()
-	//define a function pointer
-	void (*fun_ptr)(int);
+	//declare/define a function pointer
+	void ( * fun_ptr )(int);	// <return_type> (*<fptr_name>)(<parameter_type>,<parameter_type>,...)
 
 	//assign function address
 	fun_ptr = &fun;		// fun_ptr = fun;	// Assigning function address without & operator
 
 	// Invoking fun() using fun_ptr 
 	(*fun_ptr)(10);		//*fun_ptr(10);	//this will not work
+	fun_ptr(20);
 
-
+	fun_ptr = &fun1;
+	fun_ptr(30);
+	
 	//2nd example
 	int (*add_ptr)(int, int) = addTwoNumber;	//Without &, works fine
 

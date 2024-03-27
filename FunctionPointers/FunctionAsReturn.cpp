@@ -10,7 +10,6 @@ using namespace std;
 
 //typedef <return_type> (*<alias_name>)(<parameter_type>,<parameter_type>,....);
 typedef int (*ptr1_td)(int, int);
-typedef ptr1_td (*ptr2_td)();
 
 int multiply(int x, int y)
 {
@@ -33,8 +32,12 @@ int main(){
     // define a variable
     int x = 10, y = 20;
     
+    //typedef can not be used directly
+    //(*ptr1_td)(int, int);
+
     // define a function pointer
-    ptr2_td fPtr = print;	// ptr1_td (*fPtr)() = print;
+    ptr1_td (*fPtr)();
+    fPtr = print;
     
     // invoke the pointer and pass the variable as an argument
     cout << ( * fPtr () ) (x, y) << "\n\n";		//after print() return -> add(x, y);
@@ -45,7 +48,7 @@ int main(){
 /* *** Conclusion ***
 - Just like variables, functions also have pointers to them, that stores the address which points to the first instruction of the function.
 
-- The address of a function can be accessed by just writing the function name without the brackets.
+- The address of a function can be accessed by just writing the function name without the ampersand (&).
 
 - They are mainly useful for event-driven applications, callbacks, and even for storing the functions in arrays.
 
