@@ -1,6 +1,7 @@
-/* *** Difference Between Reference Variable and Pointer Variable ***
+/* *** Reference Vs Pointer Variable ***
 
-* - A reference is the same object, just with a different name and a reference must refer to an object. Since references can’t be NULL, they are safer to use. 
+* - A reference is the same object, just with a different name and a reference must refer to an object. 
+    Since references can’t be NULL, they are safer to use. 
 
 * 1. A pointer can be re-assigned while a reference cannot, and must be assigned at initialization only.
 * 2. The pointer can be assigned NULL directly, whereas the reference cannot.
@@ -31,29 +32,32 @@ int main()
 	ptr = &y; 
 
 	int& ref = x;
-	// &ref = y;				 // 1. Compile Error
+	//&ref = y;				 // 1. Compile Error
 
 	ref = y;                 // 1. x value becomes 6
 
 // 2. Compile Error : reference can't be NULL
-	ptr = NULL;
-	// &ref = NULL;			 
+	int *ptr1 = NULL;
+	//int &ref1 = NULL;			 
 
 // 3. Pointer Arithmatics : Points to next memory location
     int arr[]={10,20};
 	int* ptr_arr =arr;
-    int* &ref_arr = ptr_arr;
+    int &ref_arr = arr[0];
     cout<<"ptr_arr : "<<*ptr_arr<<endl;
     cout<<"ref_arr : "<<ref_arr<<endl;
 
-    ptr++;  // Address get incremented
-	ref++;  // value get incremented
+    ptr_arr++;  // Address get incremented
+	ref_arr++;  // value get incremented
     cout<<"ptr_arr++ : "<<*ptr_arr<<endl;
     cout<<"ref_arr++ : "<<ref_arr<<endl;
+	cout<<"\n\n";
 
 // 4. pointer has separate memory address but reference not
-	cout << &ptr << " " << &x << '\n'; // 4. Different address
-	cout << &ref << " " << &x << '\n'; // 4. Same address
+	int *ptr4 = &x;
+	int &ref4 = x;
+	cout << &ptr4 << " " << &x << '\n'; // 4. Different address
+	cout << &ref4 << " " << &x << '\n'; // 4. Same address
 
 	demo* ptr_d = &d;
 	demo& ref_d = d;
@@ -64,6 +68,7 @@ int main()
 	ref_d.a = 8;
 	// ref_d->a = 8;			 // 5. Compile Error
 
+cout<<"\n\n";
 // 6. Prints the address
 	cout << ptr << '\n';
 	cout << ref << '\n';    // 6. Print the value of x
@@ -80,7 +85,7 @@ cout<<ref_nptr;
 
 
 /* *** Which is preferred, Passing by Pointer Vs Passing by Reference in C++?  ***
-*   1. References are usually preferred over pointers whenever we don’t need “reseating”.
+*   1. References are usually preferred over pointers whenever we don’t need “resetting”.
 *   2. If we want to use NULL in our function arguments, prefer pointers.
 
 *   - Overall, Use references when you can, and pointers when you have to.

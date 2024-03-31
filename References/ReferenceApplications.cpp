@@ -24,12 +24,12 @@ void EnterDetails(Student& ref_s1)
     cout<<"Address of &ref_s1 : "<<&ref_s1<<endl;
 
 	cout<<"Enter Roll Number : ";
-    cin>>ref_s1.roln;
+    cin>>ref_s1.roln; //->
 
-    cout<<"Enter Roll Name : ";
+    cout<<"Enter Name : ";
     cin>>ref_s1.name;
 
-    cout<<"Enter Roll Address : ";
+    cout<<"Enter Address : ";
     cin>>ref_s1.Addr;
 }
 
@@ -54,6 +54,13 @@ void PassingArgumentAsReference(){
     EnterDetails(s1);
 
     PrintDetails(s1);
+}
+
+
+int& ReturnValueAsReference(){
+    static int return_value = 50;
+    cout<<"Address of return_value : "<<&return_value<<endl;
+    return return_value;
 }
 // In For Each Loop to modify all objects.
 // For Each Loop to avoid the copy of objects.
@@ -83,7 +90,11 @@ int main()
     // Modify the passed parameters in a function.
     // Avoiding a copy of large structures.
 
-    PassingArgumentAsReference();
+    //PassingArgumentAsReference();
+
+    int &result = ReturnValueAsReference();
+    cout<<"Address of result : "<<&result<<endl;
+    cout<<"\nresult = "<<result<<"\n\n";
 
 
     // In For Each Loop to modify all objects.

@@ -12,14 +12,12 @@ int main()
 
 	// ref is a reference to num.
 	int& ref = num;   //it must be initialized
-    //int& ref; //Error, not allowed
+    //int& ref=NULL; //Error, not allowed
 
 	// Value of num is now changed to 20
 	ref = 20;
 	cout << "num = " << num << '\n';
-
-	// Value of num is now changed to 30
-	num = 30;
+	
 	cout << "ref = " << ref << '\n';
 
 	return 0;
