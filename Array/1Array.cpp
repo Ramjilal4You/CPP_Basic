@@ -4,8 +4,9 @@
 
 using namespace std;
 
-// array Declaration, Definition & initialization
+// array Definition & initialization
 void array_initialization() {
+	cout<<"Array Definition & initialization\n";
 	//1. array initialization with size using initialier list
 	int arr1[5] = { 10, 20, 30, 40, 50 };
 	cout<<"arr1 : ";
@@ -16,12 +17,15 @@ void array_initialization() {
 	//2. array initialization using initializer list without specifying size
 	float arr2[] = { 1.1, 2.2, 3.3, 4.4, 5.5 };
 	cout<<"arr2 : ";
-	for (float i : arr2) { cout<<i<<" "; } //printing array elements
+	for (float i : arr2) 
+	{ 
+		cout<<i<<" "; 
+	} //printing array elements
 
 	cout<<"\n\n";
 	
 
-	//3. array initialization using for loop
+	//3. array assignment using for loop
 	int arr3[5];
 	for (int i = 0; i < 5; i++) {
 		arr3[i] = i;
@@ -34,7 +38,7 @@ void array_initialization() {
 	cout<<"\n\n";
 	
 	//4. Initialize an array partially
-	int arr4[5] = { 1};
+	int arr4[5] = { 1 };
 	cout<<"arr4 : ";
 	for (int i : arr4) { cout<<i<<" "; } //printing array elements
 
@@ -51,9 +55,10 @@ void array_initialization() {
 // array Access & Update element and array traversal
 void array_updation()
 {
+	cout<<"Array Access, Update element & array traversal\n";
 	// array declaration and initialization
 	int arr[5] = { 10, 20, 30, 40, 50 };
-	cout<<"array_updation()\nInitial arr  :  ";
+	cout<<"Initial arr  :  ";
 	for (int i : arr) { cout<<i<<" "; } //printing array elements
 
 	// modifying element at index 2
@@ -64,13 +69,40 @@ void array_updation()
 	for (int i = 0; i < 5; i++) {
 		cout<<arr[i]<<" ";
 	}
-	printf("\n\n");
+	
+	cout<<"\n\n\n\n\n";
 }
 
 int main()
 {
+	//array declaration
+	extern int arr[5];
+	
+	cout<<"Array Definition & Value assignment\n";
+	
+	{		
+		//Array Definition
+		int arr[5];
+
+		//Array Assignment
+		for(int i = 0; i < 5; i++){
+			arr[i] = i ;
+		}
+
+		//Array Traversal
+		int index = 0;
+		for( index ; index < 5; index++){
+			cout<< arr[index] <<" ";
+		}
+		
+		cout<<"\n\n";
+		
+	}
+	
+	
 	array_initialization();
 	array_updation();
+
 
 	return 0;
 }
