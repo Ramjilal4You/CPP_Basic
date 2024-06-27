@@ -1,5 +1,5 @@
-// C Program to demonstrate the structure padding property 
-#include <stdio.h> 
+// C++ Program to demonstrate the structure padding property 
+#include <iostream> 
 
 // Alignment requirements (typical 32 bit machine) 
 
@@ -35,12 +35,12 @@ typedef struct structd {
 	char c;
 } structd;
 
-//int main()
-//{
-//	printf("sizeof(structa) = %zu\n", sizeof(structa));
-//	printf("sizeof(structb) = %zu\n", sizeof(structb));
-//	printf("sizeof(structc) = %zu\n", sizeof(structc));
-//	printf("sizeof(structd) = %zu\n", sizeof(structd));
-//
-//	return 0;
-//}
+int main()
+{
+	printf("\nsizeof(structa) : Actual = 3, expected = %zu\n", sizeof(structa));
+	printf("sizeof(structb) : Actual = 7, expected = %zu\n", sizeof(structb));
+	printf("sizeof(structc) : Actual = 13, expected = %zu\n", sizeof(structc));
+	printf("sizeof(structd) : Actual = 13, expected = %zu\n\n", sizeof(structd));
+
+	return 0;
+}
