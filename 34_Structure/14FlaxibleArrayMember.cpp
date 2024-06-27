@@ -1,25 +1,26 @@
-// C program for variable length members in structures in GCC
-#include <stdio.h>
+// C++ program for variable length members in structures in GCC
+#include <iostream>
 #include <stdlib.h>
 #include <string.h>
+
+using namespace std;
 
 // A structure of type student
 struct student {
 	int stud_id;
-	int name_len;
+	int name_len; // used to store size of flexible character array stud_name[]
 
-	// This is used to store size of flexible character array stud_name[]
-	int struct_size;
+	int struct_size; //structure size
 
 	// Flexible Array Member(FAM) variable length array must be last member of structure
 	char stud_name[];
 };
 
 // Memory allocation and initialisation of structure
-struct student* createStudent(struct student* s, int id, char a[])
+struct student* createStudent(int id, char a[])
 {
 	// Allocating memory according to user provided array of characters
-	s = malloc(sizeof(*s) + sizeof(char) * strlen(a));
+	student *s = (student*)malloc(sizeof(student) + sizeof(char) * strlen(a));
 
 	s->stud_id = id;
 	s->name_len = strlen(a);
@@ -38,21 +39,21 @@ void printStudent(struct student* s)
 }
 
 
-//int main()
-//{
-//	struct student* s1 = NULL;
-//	s1 = createStudent(s1, 523, "Cherry");
-//	struct student* s2 = NULL;
-//	s2 = createStudent(s2, 535, "Sanjayulsha");
-//
-//	printStudent(s1);
-//	printStudent(s2);
-//
-//	// Size in struct student
-//	printf("Size of Struct student: %lu\n", sizeof(struct student));
-//
-//	// Size in struct pointer
-//	printf("Size of Struct pointer: %zu\n", sizeof(s1));
-//
-//	return 0;
-//}
+int main()
+{
+	struct student* s1 = NULL;
+	s1 = createStudent(523, "Ram");
+	struct student* s2 = NULL;
+	s2 = createStudent(535, "Shyam");
+
+	printStudent(s1);
+	printStudent(s2);
+
+	// Size in struct student
+	printf("Size of Struct student: %lu\n", sizeof(struct student));
+
+	// Size in struct pointer
+	printf("Size of Struct pointer: %zu\n\n\n", sizeof(s1));
+
+	return 0;
+}
