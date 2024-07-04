@@ -1,6 +1,8 @@
-/* 1. Array of structures
+/*  C++ program to demonstrate the Structure
+** 1. Array of structures
 ** 2. The structure pointer 
 ** 3. self referential structures 
+**
 */
 
 #include <iostream>
@@ -13,7 +15,7 @@ struct Point {
 // 1. Create an array of structures
 void StructureArray(){
 	cout<<"\nStructureArray()\n";
-	struct Point arr[10];	//declaration
+	Point arr[10];	//declaration	//int arr[10]
 
 	// Access array members
 	arr[0].x = 10;
@@ -28,7 +30,7 @@ void StructurePointer(){
 	struct Point p1 = { 1, 2 };
  
     // p2 is a pointer to structure p1
-    struct Point* p2 = &p1;
+    struct Point* p2 = &p1;	// int * ptr = &i;
  
     // Accessing structure members using structure pointer
     cout << p2->x << " " << p2->y <<endl;
@@ -44,15 +46,14 @@ struct node {
 void self_referential_structure()
 {
 	cout<<"\nself_referential_structure()\n";
-	struct node var2 = { 10, 20, NULL };
-	struct node var1 = { 1, 2, &var2 };
-	
+	struct node var1;
+	var1.data1 = 10;
+	var1.data2 = 'A';
+	var1.link = &var1;
 
-	// assigning the address of var2 to var1.next 
-	var1.link = &var2;
-
+	cout<<"Address of var1 : " <<&var1<<endl;
 	// accessing var2 members using var1 & pointer of var1
-	printf("var2.mem1: %d\nvar2.mem2: %d\n", var1.link->data1, var1.link->data2);
+	printf("var1.data1: %d\nvar1.data2: %c, \nvar1.link: %p\n\n\n\n\n", var1.link->data1, var1.link->data2, var1.link);
 }
 
 int main()
