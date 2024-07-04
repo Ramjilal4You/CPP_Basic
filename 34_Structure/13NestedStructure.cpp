@@ -9,52 +9,52 @@ using namespace std;
 
 // 1. By embedded nested structure.
 struct School{
-	char Section;	
+	char School_name[20];	
 	struct student{
 		int stud_roll;
 		string stud_name;
-	} st2;
+	} st_var;
 };
 
-void nestedStructure1(){
-	cout<<"\nnestedStructure1()\n";
+void nestedStructure_Example1(){
+	cout<<"\nBy embedded nested structure\n";
 
-	School st1 = { 'A', 20, "Ram" };
+	School School_var = { "Ramjilal4You", {20, "Ram"} };
 
-	cout<<"st1.Section : "<<st1.Section<<"\nst1.st2.stud_roll : "<<st1.st2.stud_roll
-	<<"\nst1.st2.stud_name : "<<st1.st2.stud_name<<endl;
+	cout<<"School_var.School_name : "<<School_var.School_name<<"\nSchool_var.st_var.stud_roll : "<<School_var.st_var.stud_roll
+	<<"\nSchool_var.st_var.stud_name : "<<School_var.st_var.stud_name<<endl;
 }
 
 
 //2. By separate nested structure
 // child structure declaration 
 struct child {
-	int x;
-	char c;
+	char cName[20];
+	int cAge;
 };
 
 // parent structure declaration 
 struct parent {
-	int a;
-	struct child b;
+	char pName[20];
+	child cVar;
 };
 
-void nestedStructure2(){
-	cout<<"\nnestedStructure2()\n";
+void nestedStructure_Example2(){
+	cout<<"\nBy separate nested structure\n";
 
-	struct parent var1 = { 25, 195, 'A' };
+	parent pVar = { "Ram", {"Lov", 15}};
 
 	// accessing and printing nested members 
-	printf("var1.a = %d\n", var1.a);
-	printf("var1.b.x = %d\n", var1.b.x);
-	printf("var1.b.c = %c\n", var1.b.c);
+	printf("pVar.pName = %s\n", pVar.pName);
+	printf("pVar.cVar.cName = %s\n", pVar.cVar.cName);
+	printf("pVar.cVar.cAge = %d\n\n", pVar.cVar.cAge);
 }
 
 int main()
 {
-	nestedStructure1();
+	nestedStructure_Example1();
 
-	nestedStructure2();
+	nestedStructure_Example2();
 
 	return 0;
 }

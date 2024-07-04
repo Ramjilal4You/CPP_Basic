@@ -17,43 +17,38 @@ struct student {
 };
 
 // Memory allocation and initialisation of structure
-struct student* createStudent(int id, char a[])
+void FAM_Example1()
 {
+	struct student* st_ptr1 = NULL;
+	char* name="Ramjilal";
 	// Allocating memory according to user provided array of characters
-	student *s = (student*)malloc(sizeof(student) + sizeof(char) * strlen(a));
+	//st_ptr1 = (student*)malloc(sizeof(student) + sizeof(char) * strlen(name));
+	const size_t st_size = sizeof(student) + sizeof(char) * strlen(name);
+	st_ptr1 = new student[st_size];
 
-	s->stud_id = id;
-	s->name_len = strlen(a);
-	strcpy_s(s->stud_name, s->name_len+1, a);
+	st_ptr1->stud_id = 100;
+	st_ptr1->name_len = strlen(name);
+	strcpy_s(st_ptr1->stud_name, st_ptr1->name_len+1, name);
+	//Assigning size according to size of stud_name which is a copy of user provided array name.
+	st_ptr1->struct_size = st_size;
 
-	// Assigning size according to size of stud_name which is a copy of user provided array a[].
-	s->struct_size = (sizeof(*s) + sizeof(char) * strlen(s->stud_name));
+	printf("\nStudent_id(int) : %d\nStud_Name(array) : %s\nName_Length(int): %d\n\nAllocated_Struct_size(int): %d\n\n", 
+	st_ptr1->stud_id, st_ptr1->stud_name, st_ptr1->name_len, st_ptr1->struct_size);
 
-	return s;
-}
+	// Size in struct student
+	printf("Size of Struct student(*st_ptr1): %lu\n", sizeof(student));
 
-// Print student details
-void printStudent(struct student* s)
-{
-	printf("Student_id(int) : %d\nStud_Name(array) : %s\nName_Length(int): %d\nAllocated_Struct_size(int): %d\n\n", s->stud_id, s->stud_name, s->name_len, s->struct_size);
+	// Size in struct pointer
+	printf("Size of Struct pointer: %zu\n\n\n", sizeof(st_ptr1));
 }
 
 
 int main()
 {
-	struct student* s1 = NULL;
-	s1 = createStudent(523, "Ram");
-	struct student* s2 = NULL;
-	s2 = createStudent(535, "Shyam");
+	//student st = {10, 20, 30, "Ram"};	//non-static initialization of a flexible array member
+	//st.stud_name = malloc(20);	//expression must be a modifiable lvalue
 
-	printStudent(s1);
-	printStudent(s2);
-
-	// Size in struct student
-	printf("Size of Struct student: %lu\n", sizeof(struct student));
-
-	// Size in struct pointer
-	printf("Size of Struct pointer: %zu\n\n\n", sizeof(s1));
+	FAM_Example1();
 
 	return 0;
 }
