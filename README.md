@@ -39,3 +39,4 @@ CPPB34 C++ Structure & Self referential Structure | Explained with Code Examples
 CPPB35 C++ Nested Structure & Flexible Array Member (FAM) | Explained with Code Examples
 CPPB36 C++ Structure  Padding & Packing | Structure Mamory Allocation | Explained with Code Examples
 CPPB37 C++ Unions & Anonymous Unions | Memory Management | Use Cases | Explained with Code Examples
+CPPB33 C++ String Class Explained with Code Examples | Mastering C++ String
