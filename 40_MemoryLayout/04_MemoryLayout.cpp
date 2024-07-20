@@ -3,25 +3,25 @@
 class Shape {
     float area;
 public:
-    Shape();
-    virtual ~Shape();
-    virtual float GetArea(float side);
+    Shape(){}
+    virtual ~Shape(){}
+    virtual float GetArea(float side){}
 };
 
 class Square {
     float area;
 public:
-    Square();
-    ~Square();
-    virtual float GetArea(float side);
+    Square(){}
+    ~Square(){}
+    virtual float GetArea(float side){}
 };
 
 class TempShape : public Square, public Shape {
     float area;
 public:
-    TempShape();
-    ~TempShape();
-    float GetArea(float side);
+    TempShape(){}
+    ~TempShape(){}
+    float GetArea(float side){}
 };
 
 /*  Memory Layout : 

@@ -2,18 +2,24 @@
 class Shape {
     float area;
 public:
-    Shape();
-    virtual ~Shape();
-    virtual float GetArea(float side);
+    Shape(){}
+    virtual ~Shape(){}
+    virtual float GetArea(float side){}
 };
 
 class Square : Shape {
     float area;
 public:
-    Square();
-    ~Square();
-    float GetArea(float side);
+    Square(){}
+    ~Square(){}
+    float GetArea(float side){}
 };
+
+int main(){
+    Square obj;
+
+return 0;
+}
 
 /*  Memory Layout : 
 Stack:
