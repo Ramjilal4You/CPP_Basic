@@ -4,12 +4,20 @@ class Shape {
     float perimeter;
     static double PI;
 public:
-    Shape();
-    virtual ~Shape();
-    virtual float GetArea(float side);
-    float GetPerimeter(float side);
-    static double GetPI();
+    Shape(){}
+    virtual ~Shape(){}
+    virtual void GetArea(float side){}
+    void GetPerimeter(float side){}
+    static void GetPI(){}
 };
+double Shape::PI=10;
+
+//static double PI2[5];
+int main(){
+    Shape obj;
+
+return 0;
+}
 
 /*  Memory Layout : 
 Stack:

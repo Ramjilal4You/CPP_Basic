@@ -4,16 +4,24 @@ class Shape {
     float area;
     float perimeter;
 public:
-    Shape();
-    ~Shape();
-    float GetArea(float side);
-    float GetPerimeter(float side);
+    Shape(){}
+    ~Shape(){}
+    void GetArea(float side){}
+    void GetPerimeter(float side){}
 };
+
+int main(){
+    Shape obj;
+
+return 0;
+}
 
 /*  Memory Layout : 
 Stack Segment:
     1. area
     2. perimeter
+    3. side
+
 Text Segment:
     1. Shape()
     2. ~Shape()
