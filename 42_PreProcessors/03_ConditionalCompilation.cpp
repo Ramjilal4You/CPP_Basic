@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-#define VALUE 7
+#define VALUE 300
 
 #if VALUE > 200
 #undef VALUE
