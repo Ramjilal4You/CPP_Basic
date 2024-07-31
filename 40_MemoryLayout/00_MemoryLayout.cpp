@@ -8,12 +8,22 @@
 *
 */
 
-//void fun(){}
+// void fun(){
+//     // do some work here
+// }
 
-//int gVar[10];
+// int gVar1;
+// int gVar2;
+// int gVar3;
+// int gVar4;
+// int gVar5;
 
 int main(){
-    //static int sVar1[5];
+    static int sVar1=10;
+    static int sVar2=10;
+    static int sVar3=10;
+    static int sVar4=10;
+    static int sVar5=10;
 
     return 0;
 }

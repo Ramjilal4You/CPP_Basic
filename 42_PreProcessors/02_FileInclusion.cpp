@@ -1,8 +1,8 @@
 // C++ Program to illustrate the File Inclusion
 
 #include <iostream>	//Including the standard header file
-#include "myHeader.h"	//Including the user defined header file
-#include "myHeader.h"
+#include "myHeader.hxx"	//Including the user defined header file
+#include "myHeader.hxx"
 
 using namespace std;
 

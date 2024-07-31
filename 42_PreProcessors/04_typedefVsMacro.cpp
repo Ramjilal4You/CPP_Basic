@@ -4,13 +4,13 @@ using namespace std;
 
 typedef char* ptr;
 
-#define PTR char* 
+#define iPTR int* 
 
 int main()
 {
 	//pointer size is 8byte & char size is 1 byte
 	ptr a, b, c;	// char* a, char* b, char* c;
-	PTR x, y, z;	// char* x, y, z;
+	iPTR x, y, z;	// char* x, y, z;
 	cout<<"sizeof a: "<< sizeof(a)<<"\n";   //8byte
 	cout<<"sizeof b: "<< sizeof(b)<<"\n";   //8byte
 	cout<<"sizeof c: "<< sizeof(c)<<"\n";   //8byte
